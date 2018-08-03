@@ -50,5 +50,14 @@ $.ajax({
       });
     });
 
+    //Search filter input
+    $('#filter').on('keyup', function(){
+      let inputVal = $(this).val().toLowerCase();
+
+      $('.employee').filter(function(){
+        $(this).toggle($(this).text().indexOf(inputVal) > -1);
+      });
+    });
+
   } //End success
 }); //End AJAX
