@@ -32,7 +32,6 @@ $.ajax({
 
       employeeHTML += '<div class="modal-content">';
       employeeHTML += '<span class="close">&times;</span>';
-      employeeHTML += '<span class="next">&rarr;</span>';
       employeeHTML += '<img src=" '+ modalPic + ' ">';
       employeeHTML += '<p class="name"> '+ modalFirstName +' '+ modalLastName +'</p>'
       employeeHTML += '<p class="email"> '+ modalEmail +' </p>';
@@ -49,30 +48,7 @@ $.ajax({
       $('.close').on('click', function(){
         $('.modal').fadeOut();
       });
-
-
-
-
-      //Next modal
-      $('.next').on('click', function(){
-        console.log(employeeHTML[0]);
-      });
-
-
-
     });
-
-
-
-    //Search filter input
-    $('#filter').on('keyup', function(){
-      let inputVal = $(this).val().toLowerCase();
-
-      $('.employee').filter(function(){
-          $(this).toggle($(this).text().indexOf(inputVal) > -1);
-      });
-    });
-
 
   } //End success
 }); //End AJAX
