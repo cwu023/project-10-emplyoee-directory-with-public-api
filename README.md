@@ -12,6 +12,6 @@ JavaScript
 
 AJAX
 
-Public API: "Random User Generator" url: https://randomuser.me/documentation#misc
+Public API: "Random User Generator" url: https://randomuser.me/
 
 Live Demo: https://cwu023.github.io/project-7-employee-directory-with-public-api/
