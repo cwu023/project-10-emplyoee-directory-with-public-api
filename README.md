@@ -1,4 +1,4 @@
-# project 10 emplyoee directory with public api
+# project 10 employee directory with public api
 
 In this project I built an employee directory using a public API "Random User Generator". I requested random user data from the API using AJAX and displayed the information on the page dynamically. I also implemented a search filter which can let users search by employee names.
 
