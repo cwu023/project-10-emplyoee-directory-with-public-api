@@ -18,17 +18,17 @@ $.ajax({
     //Modal HTML
     $('.employee').on('click', function(){
       let employeeHTML = '';
-      let currentIndex = $(this).index();
-      let modalPic = data.results[currentIndex].picture.large;
-      let modalFirstName = data.results[currentIndex].name.first;
-      let modalLastName = data.results[currentIndex].name.last;
-      let modalEmail = data.results[currentIndex].email;
-      let modalCity = data.results[currentIndex].location.city;
-      let modalPhone = data.results[currentIndex].cell;
-      let modalStreet = data.results[currentIndex].location.street;
-      let modalState = data.results[currentIndex].location.state;
-      let modalPostCode = data.results[currentIndex].location.postcode;
-      let modalBirthday = data.results[currentIndex].dob.date.substr(0, 10); //only return part of the string
+      let i = $(this).index(); //current index
+      let modalPic = data.results[i].picture.large;
+      let modalFirstName = data.results[i].name.first;
+      let modalLastName = data.results[i].name.last;
+      let modalEmail = data.results[i].email;
+      let modalCity = data.results[i].location.city;
+      let modalPhone = data.results[i].cell;
+      let modalStreet = data.results[i].location.street;
+      let modalState = data.results[i].location.state;
+      let modalPostCode = data.results[i].location.postcode;
+      let modalBirthday = data.results[i].dob.date.substr(0, 10); //only return part of the string
 
       employeeHTML += '<div class="modal-content">';
       employeeHTML += '<span class="close">&times;</span>';
@@ -40,14 +40,15 @@ $.ajax({
       employeeHTML += '<p class="phone"> '+ modalPhone +' </p>';
       employeeHTML += '<p class="address"> '+ modalStreet +''+','+' '+ modalCity +''+','+' '+ modalState +' '+ modalPostCode +'</p>';
       employeeHTML += '<p class="birthday"> '+' Birthday: '+' '+ modalBirthday +' </p></div></div>';
-      $('.modal').html(employeeHTML);
 
+      $('.modal').html(employeeHTML);
       //Open modal
       $('.modal').fadeIn();
       //Close modal
       $('.close').on('click', function(){
         $('.modal').fadeOut();
       });
+
     });
 
     //Search filter input
@@ -58,6 +59,7 @@ $.ajax({
         $(this).toggle($(this).text().indexOf(inputVal) > -1);
       });
     });
+
 
   } //End success
 }); //End AJAX

@@ -50,6 +50,10 @@ input {
   font-size: 16px;
 }
 
+input:focus {
+  outline: none;
+}
+
 img {
   border-radius: 50%;
   width: 130px;
@@ -93,19 +97,13 @@ img {
   text-align: center;
 }
 
-.close, .next {
+.close {
   font-size: 25px;
   display: block;
   text-align: right;
 }
 
 .close:hover, .close:focus {
-  color: #ccc;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.next:hover, .next:focus {
   color: #ccc;
   text-decoration: none;
   cursor: pointer;
